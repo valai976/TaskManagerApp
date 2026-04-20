@@ -25,6 +25,7 @@
                 @Html.DisplayNameFor(model => model.CreatedAt)
             </th>
             <th></th>
+            <th>Completed</th>
         </tr>
     </thead>
     <tbody>
@@ -46,6 +47,16 @@
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+            <td>
+                    @if (item.IsCompleted)
+                    {
+                        <span style="color:green;">✔ Done</span>
+                    }
+                    else
+                    {
+                        <span style="color:red;">✘ Pending</span>
+                    }
             </td>
         </tr>
 }
