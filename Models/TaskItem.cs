@@ -2,6 +2,7 @@
 
 namespace TaskManagerApp.Models
 {
+    // This class represents a task item in the application, with properties for Id, Title, Description, IsCompleted, and CreatedAt.
     public class TaskItem
     {
         public int Id { get; set; }
